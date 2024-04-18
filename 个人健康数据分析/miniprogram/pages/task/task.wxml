@@ -1,0 +1,10 @@
+<view class="container">
+  <van-cell title="选择提醒日期" is-link bind:click="showPopup" class="custom-cell" />
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom" class="custom-popup">
+    <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput"  bind:confirm="onConfirm" class="custom-datetime-picker" />
+  </van-popup>
+
+  <input type="text" placeholder="请输入任务" class="custom-input margin-bottom" bindinput="inputTask" />
+</view>
+
+<button class="submit-button" bindtap="submitForm">提交</button>

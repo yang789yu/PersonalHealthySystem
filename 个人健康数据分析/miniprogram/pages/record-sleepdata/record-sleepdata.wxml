@@ -1,0 +1,33 @@
+<view class="form-container page-background">
+
+  <view class="form-row">
+    <text class="label">睡眠质量（1-10）：</text>
+    <input class="input-field" type="number" placeholder="请输入睡眠质量评分" bindinput="inputQuality" />
+  </view>
+
+  <view class="form-row">
+    <text class="label">睡眠时间：</text>
+    <input class="input-field" type="number" placeholder="请输入睡眠时长" bindinput="inputSleeptime" />
+  </view>
+
+<van-cell class="calendar-picker" title="选择记录日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ Cshow }}" min-date="{{ minDate }}" bind:close="ConClose" bind:confirm="ConConfirm" />
+
+
+  <!-- <view class="form-row">
+    <text class="label">睡眠开始时间：</text>
+    <input placeholder="请输入睡眠开始时间" bindinput="inputStart" />
+  </view>
+
+  <view class="form-row">
+    <text class="label">睡眠结束时间：</text>
+    <input type="number" placeholder="请输入睡眠结束时间" bindinput="inputEnd" />
+  </view>
+
+  <view class="form-row">
+    <text class="label">记录时间：</text>
+    <input type="number" placeholder="请输入记录时间" bindinput="inputDate" />
+  </view> -->
+</view>
+
+<button bindtap="submitForm">提交</button>

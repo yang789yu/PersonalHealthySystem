@@ -1,0 +1,19 @@
+/* pages/person/person.wxss */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-container {
+  margin-top: 10px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+
+.custom-style {
+  margin-top: 5px;
+  font-size: 20px; /* 调整字体大小为16px */
+}

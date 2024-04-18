@@ -1,0 +1,14 @@
+<view class="button-container">
+  <navigator url="/pages/record-physicaldata/record-physicaldata" open-type="navigate">
+    <button>记录体征数据</button>
+  </navigator>
+  <navigator url="/pages/record-exercisedata/record-exercisedata" open-type="navigate">
+    <button>记录运动数据</button>
+  </navigator>
+  <navigator url="/pages/record-dietdata/record-diedata" open-type="navigate">
+    <button>记录饮食数据</button>
+  </navigator>
+  <navigator url="/pages/record-sleepdata/record-sleepdata" open-type="navigate">
+    <button>记录睡眠数据</button>
+  </navigator>
+</view>

@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  height: 100%; /* 使用视口高度作为容器高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.margin-bottom {
+  // display: flex;
+  // justify-content: center;
+  margin-bottom: 10px;
+}
+
+.block-text {
+  display: block;
+} 
+
+// 卡片效果
+.card {
+  background-color: #bcf09f !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important; /* 添加阴影效果 */
+  padding: 16px !important; /* 调整内边距 */
+  margin-bottom: 16px !important; /* 添加底部间距 */
+}
+
+.card-header {
+  color: #0a0a0a;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-bottom: 12px !important;
+}
+
+.card-content {
+  font-size: 14px !important;
+  color: #333333 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 12px !important;
+}
+
+.card-footer {
+  font-size: 12px !important;
+  color: #999999 !important;
+}

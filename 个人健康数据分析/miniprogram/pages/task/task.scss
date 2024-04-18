@@ -1,0 +1,43 @@
+/* pages/task/task.wxss *//* WXSS 文件 */
+.container {
+  padding: 20rpx; /* 内边距 */
+}
+
+.custom-cell {
+  margin-bottom: 10px;
+  font-size: 16rpx; /* 字体大小 */
+  color: #333; /* 文字颜色 */
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.custom-popup {
+  background-color: rgba(0, 0, 0, 0.5); /* 弹出层背景颜色，半透明黑色 */
+}
+
+.custom-datetime-picker {
+  font-size: 14rpx; /* 字体大小 */
+}
+
+.custom-input {
+  width: 100%; /* 输入框宽度 */
+  height: 160rpx; /* 输入框高度，您可以根据需要调整为合适的值 */
+  padding: 8rpx; /* 内边距 */
+  font-size: 25rpx; /* 字体大小 */
+  border: 1rpx solid #ccc; /* 边框 */
+  border-radius: 5rpx; /* 边框圆角 */
+  box-sizing: border-box; /* 盒子模型设置为边框盒模型 */
+}
+
+.submit-button {
+  width: 90%; /* 按钮宽度 */
+  height: 80rpx; /* 按钮高度 */
+  background-color: #009933; /* 按钮背景色：深绿色 */
+  color: #fff; /* 字体颜色：白色 */
+  border: none; /* 去除边框 */
+  border-radius: 8rpx; /* 边框圆角 */
+  font-size: 32rpx; /* 字体大小 */
+  margin-top: 20rpx; /* 顶部外边距 */
+}

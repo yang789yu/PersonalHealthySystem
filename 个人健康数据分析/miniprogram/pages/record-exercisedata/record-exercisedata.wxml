@@ -1,0 +1,34 @@
+<view class="form-container page-background">
+  <view class="form-row">
+    <text class="label">运动类型：</text>
+    <input class="input-field" placeholder="请输入运动类型" bindinput="inputType" />
+  </view>
+  <view class="form-row">
+    <text class="label">运动时长(min)：</text>
+    <input class="input-field" type="number" placeholder="请输入运动时间" bindinput="inputMinutes" />
+  </view>
+  <view class="form-row">
+    <text class="label">运动距离(km)：</text>
+    <input class="input-field" type="number" placeholder="请输入运动距离" bindinput="inputDistance" />
+  </view>
+  <view class="form-row">
+    <text class="label">运动消耗(cal)：</text>
+    <input class="input-field" type="number" placeholder="请输入运动消耗" bindinput="inputBurned" />
+  </view>
+  <!-- <view class="form-row">
+    <text class="label">运动日期：</text>
+    <input type="number" placeholder="请输入运动消耗" bindinput="inputDate" />
+  </view> -->
+
+
+  <view class="form-row">
+    <text class="label">对本次运动的描述：</text>
+    <textarea class="input-field" placeholder="运动完的体会与感受"></textarea>
+  </view>
+
+  <van-cell class="calendar-picker" title="选择记录日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ show }}" min-date="{{ minDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+</view>
+
+<button class="submit-button" bindtap="submitForm">提交</button>

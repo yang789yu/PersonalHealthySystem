@@ -1,0 +1,242 @@
+<view class="container">
+  <image src="../../image/轮播图/轮播1.jpg" mode="aspectFill"></image>
+</view>
+
+
+<!-- <van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="查询我的个人体征数据" name="1" bindtap="analyzePhycicalData">
+    <view>
+      <block wx:for="{{responsePhysicalData}}" wx:for-index="index" wx:for-item="item">
+        <view class="card">
+          <view class="card-header">记录时间：{{item.measurement_date}}</view>
+          <view class="card-content">
+            <view style="display: block;">
+              <text class="block-text">身高: {{item.height}}</text>
+              <text class="block-text">体重: {{item.weight}}</text>
+              <text class="block-text">舒张压: {{item.blood_pressure_diastolic}}</text>
+              <text class="block-text">收缩压: {{item.blood_pressure_systolic}}</text>
+              <text class="block-text">血脂：{{item.blood_lipid}}</text>
+              <text class="block-text">血糖：{{item.blood_sugar}}</text>
+            </view>
+          </view>
+          <view class="card-footer">底部信息</view>
+        </view>
+      </block>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="查询我的个人运动数据" name="2" bindtap="analyzeExerciseData">
+    <view>
+      <block wx:for="{{responseExerciseData}}" wx:for-index="index" wx:for-item="item">
+        <view class="card">
+          <view class="card-header">运动日期：{{item.exercise_date}}</view>
+          <view class="card-content">
+            <view style="display: block;">
+              <text class="block-text">运动类型: {{item.exercise_type}}</text>
+              <text class="block-text">运动时长: {{item.exercise_duration_minutes}}</text>
+              <text class="block-text">运动距离: {{item.exercise_distance}}</text>
+              <text class="block-text">运动消耗: {{item.calories_burned}}</text>
+            </view>
+          </view>
+          <view class="card-footer">底部信息</view>
+        </view>
+      </block>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="查询我的个人饮食数据" name="3" bindtap="analyzeDietData">
+    <view>
+      <block wx:for="{{responseDietData}}" wx:for-index="index" wx:for-item="item">
+        <view class="card">
+          <view class="card-header">记录日期：{{item.meal_date}}</view>
+          <view class="card-content">
+            <view style="display: block;">
+              <text class="block-text">食物名称: {{item.food_name}}</text>
+              <text class="block-text">食物数量: {{item.food_quantity}}</text>
+              <text class="block-text">食物卡路里: {{item.calories}}</text>
+              <text class="block-text">用餐时间: {{item.meal_time}}</text>
+            </view>
+          </view>
+          <view class="card-footer">底部信息</view>
+        </view>
+      </block>
+    </view>
+  </van-collapse-item>
+  <van-collapse-item title="查询我的个人睡眠数据" name="4" bindtap="analyzeSleepData">
+    <view>
+      <block wx:for="{{responseSleepData}}" wx:for-index="index" wx:for-item="item">
+        <view class="card">
+          <view class="card-header">记录日期：{{item.sleep_date}}</view>
+          <view class="card-content">
+            <view style="display: block;">
+              <text class="block-text">睡眠质量（1-10）: {{item.sleep_quality}}</text>
+              <text class="block-text">睡眠时长: {{item.sleep_time}}</text>
+            </view>
+          </view>
+          <view class="card-footer">底部信息</view>
+        </view>
+      </block>
+    </view>
+  </van-collapse-item>
+</van-collapse> -->
+
+
+
+
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="handleDropdownChange" data-index="1" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="handleDropdownChange" data-index="2" />
+</van-dropdown-menu>
+
+<view wx:if="{{ value1 === 0}} && {{ value2 === 'a' }}">
+  <block wx:for="{{responsePhysicalData}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录时间：{{item.measurement_date}}</view>
+      <view class="card-content">
+        <view style="display: block;">
+          <text class="block-text">身高: {{item.height}}</text>
+          <text class="block-text">体重: {{item.weight}}</text>
+          <text class="block-text">舒张压: {{item.blood_pressure_diastolic}}</text>
+          <text class="block-text">收缩压: {{item.blood_pressure_systolic}}</text>
+          <text class="block-text">血脂：{{item.blood_lipid}}</text>
+          <text class="block-text">血糖：{{item.blood_sugar}}</text>
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{ value1 === 0}} && {{ value2 === 'b' }}">
+  <block wx:for="{{responsePhysicalData1}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录时间：{{item.measurement_date}}</view>
+      <view class="card-content">
+        <view style="display: block;">
+          <text class="block-text">身高: {{item.height}}</text>
+          <text class="block-text">体重: {{item.weight}}</text>
+          <text class="block-text">舒张压: {{item.blood_pressure_diastolic}}</text>
+          <text class="block-text">收缩压: {{item.blood_pressure_systolic}}</text>
+          <text class="block-text">血脂：{{item.blood_lipid}}</text>
+          <text class="block-text">血糖：{{item.blood_sugar}}</text>
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{value1 === 1}} && {{ value2 === 'a'}}">
+  <block wx:for="{{responseExerciseData}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">运动日期：{{item.exercise_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">运动类型: {{item.exercise_type}}</text>
+          <text class="block-text">运动时长: {{item.exercise_duration_minutes}}</text>
+          <text class="block-text">运动距离: {{item.exercise_distance}}</text>
+          <text class="block-text">运动消耗: {{item.calories_burned}}</text>
+          <!-- 其他信息... -->
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{value1 === 1}} && {{ value2 === 'b'}}">
+  <block wx:for="{{responseExerciseData1}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">运动日期：{{item.exercise_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">运动类型: {{item.exercise_type}}</text>
+          <text class="block-text">运动时长: {{item.exercise_duration_minutes}}</text>
+          <text class="block-text">运动距离: {{item.exercise_distance}}</text>
+          <text class="block-text">运动消耗: {{item.calories_burned}}</text>
+          <!-- 其他信息... -->
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{ value1 === 3}} && {{ value2 === 'a' }}">
+  <block wx:for="{{responseDietData}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录日期：{{item.meal_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">食物名称: {{item.food_name}}</text>
+          <text class="block-text">食物数量: {{item.food_quantity}}</text>
+          <text class="block-text">食物卡路里: {{item.calories}}</text>
+          <text class="block-text">用餐时间: {{item.meal_time}}</text>
+          <!-- 其他信息... -->
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{ value1 === 3}} && {{ value2 === 'b' }}">
+  <block wx:for="{{responseDietData1}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录日期：{{item.meal_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">食物名称: {{item.food_name}}</text>
+          <text class="block-text">食物数量: {{item.food_quantity}}</text>
+          <text class="block-text">食物卡路里: {{item.calories}}</text>
+          <text class="block-text">用餐时间: {{item.meal_time}}</text>
+          <!-- 其他信息... -->
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{ value1 === 2}} && {{value2 === 'a'}}">
+  <block wx:for="{{responseSleepData}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录日期：{{item.sleep_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">睡眠质量（1-10）: {{item.sleep_quality}}</text>
+          <text class="block-text">睡眠时长: {{item.sleep_time}}</text>
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{ value1 === 2}} && {{value2 === 'b'}}">
+  <block wx:for="{{responseSleepData1}}" wx:for-index="index" wx:for-item="item">
+    <view class="card">
+      <view class="card-header">记录日期：{{item.sleep_date}}</view>
+      <view class="card-content">
+        <!-- 这里放置卡片内容 -->
+        <view style="display: block;">
+          <text class="block-text">睡眠质量（1-10）: {{item.sleep_quality}}</text>
+          <text class="block-text">睡眠时长: {{item.sleep_time}}</text>
+        </view>
+      </view>
+      <view class="card-footer">底部信息</view>
+    </view>
+  </block>
+</view>
+
+<!-- 卡片效果 -->
+<!-- <view class="card">
+  <view class="card-header">标题</view>
+  <view class="card-content">
+    <text>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+  </view>
+  <view class="card-footer">底部信息</view>
+</view> -->

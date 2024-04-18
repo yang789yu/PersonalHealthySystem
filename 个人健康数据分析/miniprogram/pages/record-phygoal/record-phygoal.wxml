@@ -1,0 +1,35 @@
+<view class="form-container page-background">
+  <view class="form-row">
+    <text class="label">身高：</text>
+    <input class="input-field" type="number" placeholder="请输入身高" bindinput="inputHeight" />
+  </view>
+  <view class="form-row">
+    <text class="label">体重：</text>
+    <input class="input-field" type="number" placeholder="请输入体重" bindinput="inputWeight" />
+  </view>
+  <view class="form-row">
+    <text class="label">血压-收缩压(mmhg)：</text>
+    <input class="input-field" type="number" placeholder="请输入血压-收缩压" bindinput="inputSystolic" />
+  </view>
+  <view class="form-row">
+    <text class="label">血压-舒张压(mmhg)：</text>
+    <input class="input-field" type="number" placeholder="请输入血压-舒张压" bindinput="inputDiastolic" />
+  </view>
+  <view class="form-row">
+    <text class="label">血糖(mmol/L)：</text>
+    <input class="input-field" type="number" placeholder="请输入血糖" bindinput="inputSugar" />
+  </view>
+  <view class="form-row">
+    <text class="label">血脂(mmol/L)：</text>
+    <input class="input-field" type="number" placeholder="请输入血脂" bindinput="inputLipid" />
+  </view>
+  <!-- <view class="form-row">
+    <text class="label">测试时间：</text>
+    <input type="number" placeholder="请输入测试时间" bindinput="inputDate" />
+  </view> -->
+  <van-cell class="calendar-picker" title="选择记录日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ show }}" min-date="{{ minDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+
+</view>
+
+<button class="submit-button" bindtap="submitForm">提交</button>

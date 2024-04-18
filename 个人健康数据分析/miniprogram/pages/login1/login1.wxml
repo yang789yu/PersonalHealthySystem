@@ -1,0 +1,41 @@
+<view class="content">
+    <view class="logo">健行健远</view>
+    <view class="form-box">
+        <view class="tab-menu">
+            <view class="tab-name" bindtap="tabChange" data-id="0">
+                <text class="{{tabIndex==0?'tab-txt':''}}">登录</text>
+                <text wx:if="{{tabIndex==0}}" class="tab-active"></text>
+            </view>
+            <view class="tab-name" bindtap="tabChange" data-id="1">
+                <text class="{{tabIndex==1?'tab-txt':''}}">注册</text>
+                <text wx:if="{{tabIndex==1}}" class="tab-active"></text>
+            </view>
+        </view>
+        <view wx:if="{{tabIndex==0}}">
+            <view class="row-input">
+                <image mode="aspectFit" src="../../image/账号.png"></image>
+                <input placeholder="输入账号" maxlength="18" bindinput="inputId_login" />
+            </view>
+            <view class="row-input">
+                <image mode="aspectFit" src="../../image/密码.png"></image>
+                <input placeholder="输入密码" maxlength="18" password="true" bindinput="inputPassword_login" />
+            </view>
+            <view class="menu-link">
+                <text>忘记密码?</text>
+            </view>
+            <view class="login-btn" bindtap="login">登录</view>
+        </view>
+        <view wx:if="{{tabIndex==1}}">
+            <view class="row-input">
+                <image mode="aspectFit" src="../../image/账号.png"></image>
+                <input placeholder="请输入注册账号" maxlength="18" type="number" bindinput="inputId_register" />
+            </view>
+            <view class="row-input">
+                <image mode="aspectFit" src="../../image/密码.png"></image>
+                <input placeholder="请输入注册密码" maxlength="18" password="true" bindinput="inputPassword_register" />
+            </view>
+            <view class="login-btn register" bindtap="register">注册</view>
+            <view class="agree-txt">注册即表示您同意<text>《xx用户协议》</text></view>
+        </view>
+    </view>
+</view>

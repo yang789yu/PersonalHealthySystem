@@ -1,0 +1,64 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container button {
+  margin-top: 20px; // 设置按钮之间的垂直间距
+  width: 230px;
+  height: 40px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+// 可以根据需要自定义按钮样式，比如:hover等状态
+.button-container button:hover {
+  background-color: #2980b9;
+}
+
+// 卡片效果
+.card {
+  background-color: #9ff0e9 !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-direction: column;
+  /* 设置主轴方向为垂直方向 */
+  justify-content: center;
+  /* 在主轴方向上居中对齐 */
+  align-items: center;
+  /* 在交叉轴方向上居中对齐 */
+  height: 100%;
+  /* 设置卡片高度为父容器的高度 */
+
+}
+
+.card-header {
+  color: #0a0a0a;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-bottom: 12px !important;
+}
+
+.card-content {
+  font-size: 14px !important;
+  color: #333333 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 12px !important;
+}
+
+.card-footer {
+  font-size: 12px !important;
+  color: #999999 !important;
+}

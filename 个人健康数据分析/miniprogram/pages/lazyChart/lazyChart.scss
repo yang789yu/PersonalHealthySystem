@@ -1,0 +1,160 @@
+.wrap {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30rpx;
+}
+
+.btn {
+  font-size: 20px;
+}
+
+.on {
+  color: lightseagreen;
+  border-bottom: 1px solid lightseagreen;
+}
+
+.my-chart {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* 使用视口高度作为容器高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  justify-content: space-between;
+  /* 将元素分散对齐，以填充容器的整个宽度 */
+}
+
+.card2 {
+  width: calc(50% - 10px);
+  /* 设置卡片的宽度为容器宽度的一半，减去间距 */
+  margin-right: 10px;
+  /* 设置卡片之间的右边距 */
+  background-color: #f19edf !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+
+.margin-bottom {
+  // display: flex;
+  // justify-content: center;
+  margin-bottom: 10px;
+}
+
+.block-text {
+  display: block;
+}
+
+// 卡片效果
+.card {
+  background-color: #6ce8ec !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.card1 {
+  background-color: #bbeb85 !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.card3 {
+  background-color: #7aa2ee !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.card4 {
+  background-color: #93f3eb !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 4px rgba(219, 42, 42, 0.171) !important;
+  /* 添加阴影效果 */
+  padding: 16px !important;
+  /* 调整内边距 */
+  margin-bottom: 16px !important;
+  /* 添加底部间距 */
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.card-header {
+  color: #0a0a0a;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-bottom: 12px !important;
+}
+
+.card_header_flex {
+  display: flex;
+  justify-content: space-between; /* 让子元素水平等间距分布 */
+  align-items: center; /* 垂直居中 */
+}
+
+.card-text {
+  font-size: 16px; /* 设置文字大小 */
+  margin-bottom: 12px;
+  color: rgb(216, 50, 133); /* 设置文字颜色 */
+}
+
+.card-content {
+  font-size: 14px !important;
+  color: #333333 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 12px !important;
+}
+
+.card-footer {
+  font-size: 12px !important;
+  color: #999999 !important;
+}
+
+.container_grid {
+  display: flex;
+  justify-content: space-between;
+  /* 将元素分散对齐，第一个元素位于左端，第二个元素位于右端 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}

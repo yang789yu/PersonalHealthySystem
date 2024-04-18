@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<van-notice-bar left-icon="volume-o" text="{{id}}你好，欢迎来到个人健康数据分析系统，这是专属于你个人的分析系统，我们将全面为你服务" />
+
+<!-- <view>{{ id }}你好！欢迎来到你专属的个人健康数据分析系统</view> -->
+
+<!-- 轮播图 -->
+<view class="swiper">
+  <swiper 
+    autoplay="true" 
+    interval="2000" 
+    indicator-dots="true" 
+    circular="true"
+    indicator-color="#fff"
+    indicator-active-color="#f3514f"
+  >
+    <swiper-item>
+      <image src="../../image/轮播图/轮播1.jpg" mode="" show-menu-by-longpress="true" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../image/轮播图/轮播2.jpg" mode="" show-menu-by-longpress="true" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../image/轮播图/轮播3.jpg" mode="" show-menu-by-longpress="true" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../image/轮播图/轮播4.jpg" mode="" show-menu-by-longpress="true" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 计时器
+<view class="margin-top-10">
+  <view class="margin-center">锻炼计时器</view>
+  <van-count-down class="control-count-down" millisecond time="{{ 3000 }}" auto-start="{{ false }}" format="ss:SSS" bind:finish="finished" />
+  <van-grid clickable column-num="3">
+    <van-grid-item text="开始" icon="play-circle-o" bindclick="start" />
+    <van-grid-item text="暂停" icon="pause-circle-o" bindclick="pause" />
+    <van-grid-item text="重置" icon="replay" bindclick="reset" />
+  </van-grid>
+</view> -->
+
+<view class="button-grid margin-top-25">
+  <navigator url="/pages/record/record" open-type="navigate">
+    <button>数据记录</button>
+  </navigator>
+  <button bindtap="redirectToAnalyze1">数据分析</button>
+  <button bindtap="redirectToAnalyze">数据查询</button>
+  <button bindtap="redirectToGoal">健康目标设定</button>
+  <button bindtap="exportData">导出数据</button>
+  <navigator url="/pages/task/task" open-type="navigate">
+    <button>设置任务提醒</button>
+  </navigator>
+</view> 
+
+<!-- <view>
+    <progress percent="{{progressPercent}}" show-info stroke-width="8" />
+</view> -->
+
+<!-- <view class="progress-container">
+  <canvas canvas-id="progressCanvas" style="width: 200px; height: 200px;"></canvas>
+</view> -->
+
+<!-- <view>
+  <image src="../../assets/1.png" mode="aspectFit"/>
+</view> -->
+
+
+

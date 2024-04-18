@@ -1,0 +1,32 @@
+<view class="button-container">
+  <navigator url="/pages/record-phygoal/record-phygoal" open-type="navigate">
+    <button>设置我的特征数据目标</button>
+  </navigator>
+</view>
+
+
+<!-- <view>以下为身高目标达成进度表</view>
+<view>
+  <canvas canvas-id="progressCanvas" style="width: 200px; height: 200px; display: {{showProgress ? 'block' : 'none'}};"></canvas>
+  <button id="progressButton" bindtap="bindDrawProgress">{{showProgress ? '隐藏' : '显示'}}进度条</button>
+</view> -->
+
+<!-- <view>以下为体重目标达成进度条</view>
+<view>
+    <progress percent="{{progressPercent}}" show-info stroke-width="8" />
+</view> -->
+
+
+<view class="card">
+  <view class="card-header">体重目标进度表</view>
+  <view class="card-content">
+    <van-circle value="{{ value }}" color="{{ gradientColor }}" stroke-width="6" size="120" text="{{ value }}" />
+  </view>
+</view>
+
+<view class="card">
+  <view class="card-header">身高目标进度表</view>
+  <view class="card-content">
+    <van-circle value="{{ value1 }}" color="{{ gradientColor }}" stroke-width="6" size="120" text="{{ value1 }}" />
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="form-container page-background">
+  <view class="form-row">
+    <text class="label">食物名称：</text>
+    <input class="input-field" placeholder="请输入食物名称" bindinput="inputName" />
+  </view>
+  <view class="form-row">
+    <text class="label">食物数量：</text>
+    <input class="input-field" type="number" placeholder="请输入食物数量" bindinput="inputQuantity" />
+  </view>
+  <view class="form-row">
+    <text class="label">食物热量(cal)：</text>
+    <input class="input-field" type="number" placeholder="请输入食物热量" bindinput="inputCalories" />
+  </view>
+  <!-- <view class="form-row">
+    <text class="label">用餐时间：</text>
+    <input  type="number" placeholder="用餐时间" bindinput="inputTime" />
+  </view> -->
+  <!-- <view class="form-row">
+    <text class="label">用餐日期：</text>
+    <input type="number" placeholder="请输入用餐日期" bindinput="inputDate" />
+  </view> -->
+
+
+  <van-cell title="选择进餐时间" is-link bind:click="showPopup" />
+  <van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+    <view style="height: 500rpx; background-color: #fff;">
+      <van-datetime-picker type="time" value="{{ currentDate }}" min-hour="{{ minHour }}" max-hour="{{ maxHour }}" bind:input="onInput" bind:confirm="onConfirm" />
+    </view>
+  </van-popup>
+
+  <van-cell class="calendar-picker" title="选择记录日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ Cshow }}" min-date="{{ minDate }}" bind:close="ConClose" bind:confirm="ConConfirm" />
+
+
+</view>
+
+<button class="submit-button" bindtap="submitForm">提交</button>

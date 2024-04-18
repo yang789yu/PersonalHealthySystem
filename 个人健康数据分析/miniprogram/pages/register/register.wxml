@@ -1,0 +1,8 @@
+<!--pages/register/register.wxml-->
+<view >
+    <view>请输入用户ID：</view>
+    <input type="text" placeholder="请输入用户ID" bindinput="inputId"/> 
+    <view>请输入密码：</view>
+    <input type="password" placeholder="请输入密码" bindinput="inputPassword"/>
+    <button bindtap="submitForm">注册</button>
+</view>

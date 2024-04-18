@@ -1,0 +1,85 @@
+{
+  "entryPagePath": "pages/login1/login1",
+  "pages": [
+    "pages/index/index",
+    "pages/analyze/analyze",
+    "pages/lazyChart/lazyChart",
+    "pages/analyze1/analyze1",
+    "pages/inquire/inquire",
+    "pages/person/person",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/record/record",
+    "pages/record-physicaldata/record-physicaldata",
+    "pages/record-exercisedata/record-exercisedata",
+    "pages/record-dietdata/record-diedata",
+    "pages/record-sleepdata/record-sleepdata",
+    "pages/login1/login1",
+    "pages/goal/goal",
+    "pages/record-phygoal/record-phygoal",
+    "pages/test1/test1",
+    "pages/task/task"
+
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "个人健康数据分析",
+    "navigationBarBackgroundColor": "#d2eaea",
+    "enablePullDownRefresh":true,
+    "backgroundColor": "#efefef"
+  },
+  "tabBar": {
+    "selectedColor": "#121211",
+    "color": "#a2a29c",
+    "backgroundColor": "#efefef",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "./assets/首页-未选中.png",
+        "selectedIconPath": "./assets/首页-选中.png"
+      },
+      {
+        "text": "分析",
+        "pagePath": "pages/lazyChart/lazyChart",
+        "iconPath": "./assets/分析.png",
+        "selectedIconPath": "./assets/分析.png"
+      },
+      {
+        "text": "目标设定",
+        "pagePath": "pages/goal/goal",
+        "iconPath": "./assets/查询.png",
+        "selectedIconPath": "./assets/查询.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/person/person",
+        "iconPath": "./assets/我的.png",
+        "selectedIconPath": "./assets/我的.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-circle": "@vant/weapp/circle/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

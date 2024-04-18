@@ -1,0 +1,123 @@
+<view class="wrap">
+  <view class="btn {{type=='Weight' ? 'on' : ''}}" data-type="Weight" bindtap="changeType">体重</view>
+  <view class="btn {{type=='Height' ? 'on' : ''}}" data-type="Height" bindtap="changeType">身高</view>
+</view>
+
+<view class="my-chart">
+  <ec-canvas id="lazy-mychart-dom" canvas-id="lazy-mychart" ec="{{lazyEc}}"></ec-canvas>
+</view>
+
+
+<view class="card">
+  <view class="card-header">身高变化趋势</view>
+  <view class="card-content">
+    <text>{{ heightTrend }}</text>
+  </view>
+  <view class="card-footer">{{ heightTrendText }}</view>
+</view>
+
+<view class="card">
+  <view class="card-header">体重变化趋势</view>
+  <view class="card-content">
+    <text>{{ weightTrend }}</text>
+  </view>
+  <view class="card-footer">{{ weightTrendText }}</view>
+</view>
+
+<view class="card1">
+  <view class="card-header">疾病风险评估</view>
+  <view class="card-content">
+
+    <view class="margin-bottom">
+      <view class="container_grid margin-bottom">
+        <text>高血压</text>
+        <text>{{blood_pressure_risk_level}}</text>
+      </view>
+      <van-progress percentage="{{blood_pressure_probability}}" pivot-text="{{blood_pressure_probability}}%" pivot-color="#7232dd" color="linear-gradient(to right, #be99ff, #7232dd)" class="margin-bottom" />
+    </view>
+    <view class="margin-bottom">
+      <view class="container_grid margin-bottom">
+        <text>糖尿病</text>
+        <text>{{risk_level}}</text>
+      </view>
+      <van-progress percentage="{{diabetes_probability}}" pivot-text="{{diabetes_probability}}%" pivot-color="#7232dd" color="linear-gradient(to right, #be99ff, #7232dd)" class="margin-bottom" />
+    </view>
+    <view class="margin-bottom">
+      <view class="container_grid margin-bottom">
+        <text>高血脂</text>
+        <text>{{lipid_risk_level}}</text>
+      </view>
+      <van-progress percentage="{{lipid_probability}}" pivot-text="{{lipid_probability}}%" pivot-color="#7232dd" color="linear-gradient(to right, #be99ff, #7232dd)" />
+    </view>
+    <view class="card-footer">以上的评估仅供参考</view>
+  </view>
+</view>
+
+<view class="container2">
+  <view class="card2">
+    <view class="card_header_flex">
+      <view class="card-header">BMI指数</view>
+      <view wx:if="{{ BMI < 18.5 }}" class="card-text"> 偏瘦 </view>
+      <view wx:elif="{{ BMI >= 18.5 && BMI < 24 }}" class="card-text"></view>
+      <view wx:else class="card-text"> 超重 </view>
+    </view>
+    <view class="card-content">
+      <text>{{ BMI }}</text>
+    </view>
+  </view>
+
+
+  <view class="card2">
+    <view class="card_header_flex">
+      <view class="card-header">运动强度</view>
+      <view wx:if="{{ cntExercise < 2 }}" class="card-text"> 偏少 </view>
+      <view wx:elif="{{ cntExercise >= 2 && cntExercise < 5 }}" class="card-text">合适</view>
+      <view wx:else class="card-text"> 偏多 </view>
+    </view>
+    <view class="card-content">
+      <text>{{ cntExercise }}次</text>
+    </view>
+  </view>
+</view>
+
+<view class="card3">
+  <view class="card-header">减肥建议</view>
+  <view class="card-content">
+    <view wx:if="{{ BMI < 18.5 }}">
+      <view>均衡饮食：增加摄入高蛋白质、健康脂肪和碳水化合物的食物，如坚果、鱼类、瘦肉、全麦面包和谷类。</view>
+      <view>适度运动：进行适度的肌肉训练和有氧运动，以增加肌肉质量和体重。</view>
+      <view>控制压力：减轻压力有助于促进胃肠功能和营养吸收。</view>
+      <view>规律作息：保持规律的作息时间，保证充足的睡眠。</view>
+    </view>
+    <view wx:elif="{{ BMI >= 18.5 && BMI < 24 }}">
+      <view>均衡饮食：保持均衡饮食，多食用蔬菜、水果、全谷类、蛋白质丰富的食物，控制高糖、高脂肪食物的摄入。</view>
+      <view>适度运动：每周进行至少150分钟的中等强度有氧运动，如快走、游泳或骑自行车，并进行全身性肌肉训练。</view>
+      <view>控制饮食量：注意饮食量，避免暴饮暴食，注意饮食节制。</view>
+      <view>定期体检：定期进行体重和健康检查，以确保身体健康。</view>
+    </view>
+    <view wx:else class="card-text">
+      <view>控制饮食：减少高热量、高脂肪和高糖食物的摄入，增加蔬菜、水果和全谷类食物的比例。</view>
+      <view>增加运动量：增加每周至少300分钟的中等强度有氧运动，如快走、慢跑、游泳或骑自行车，并结合全身性肌肉训练。</view>
+      <view>控制饮食时间：避免晚餐过晚，避免就睡前进食。</view>
+      <view>建立健康生活习惯：养成良好的生活习惯，如规律作息、充足睡眠和减轻压力，有助于控制体重和保持健康状态。</view>
+    </view>
+  </view>
+  <view class="card-footer">底部信息</view>
+</view>
+
+
+<view class="card4">
+  <view class="card-header">运动建议</view>
+  <view class="card-content">
+    <view wx:if="{{ cntExercise < 2 }}">
+      <view>增加每周的运动次数和时长，逐渐增加运动强度，例如每天多走几步或者增加每周一次的有氧运动课程</view>
+    </view>
+
+    <view wx:elif="{{ cntExercise >= 2 && cntExercise < 5 }}">
+      <view>保持目前的运动量，确保每周进行足够的有氧运动和力量训练，以保持身体健康和活力</view>
+    </view>
+
+    <view wx:else> 注意不要过度运动，确保给身体足够的休息时间，适当减少运动强度或次数，以防止过度疲劳和受伤 </view>
+  </view>
+  <view class="card-footer">底部信息</view>
+</view>

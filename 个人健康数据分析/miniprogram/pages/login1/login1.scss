@@ -1,0 +1,161 @@
+page {
+  background-color: #5de97f;
+}
+
+.logo {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 120rpx;
+  letter-spacing: 5rpx;
+  font-weight: bold;
+}
+
+.form-box {
+  padding: 0 50rpx;
+  margin: 0 70rpx;
+  height: 750rpx;
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+
+  .tab-menu {
+      padding-top: 50rpx;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100rpx;
+
+      .tab-name {
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+          width: 150rpx;
+          font-size: 40rpx;
+          font-weight: bold;
+          color: #afafaf;
+
+          &.tab-txt {
+              color: #5b5b5b;
+          }
+
+          &.tab-active {
+              margin-top: 10rpx;
+              width: 100rpx;
+              height: 13rpx;
+              background-color: #6bb3fe;
+              border-radius: 15rpx;
+          }
+      }
+  }
+
+  .row-input {
+      margin: 60rpx 0 0 0;
+      padding: 0 20rpx;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 80rpx;
+      border: 5rpx solid #bbf7c8;
+      border-radius: 8rpx;
+
+      image {
+          width: 30rpx;
+          height: 30rpx;
+      }
+
+      input {
+          padding-left: 20rpx;
+          font-size: 28rpx;
+          width: 400rpx;
+      }
+  }
+
+  .row-input-code {
+      margin-top: 20rpx;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80rpx;
+      font-size: 28rpx;
+
+      .input-box {
+          padding: 0 20rpx;
+          width: 60%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 100%;
+          border: 5rpx solid #bbf7c8;
+          border-top-left-radius: 8rpx;
+          border-bottom-left-radius: 8rpx;
+          box-sizing: border-box;
+
+          .img {
+              width: 40rpx;
+              height: 30rpx;
+          }
+
+          input {
+              padding-left: 20rpx;
+              font-size: 28rpx;
+              width: 300rpx;
+          }
+      }
+
+      .code-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40%;
+          height: 100%;
+          color: #FFFFFF;
+          border-top-right-radius: 8rpx;
+          border-bottom-right-radius: 8rpx;
+          background: linear-gradient(#44aae8, #4889e2);
+      }
+  }
+
+  .menu-link {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 70rpx;
+      color: #007AFF;
+      font-size: 24rpx;
+  }
+
+  .login-btn {
+      margin-top: 30rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80rpx;
+      background: linear-gradient(#44aae8, #4889e2);
+      border-radius: 50rpx;
+      color: #FFFFFF;
+      font-size: 35rpx;
+      font-weight: bold;
+      letter-spacing: 4rpx;
+  }
+
+  .register {
+      margin-top: 50rpx;
+  }
+
+  .agree-txt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70rpx;
+      font-size: 24rpx;
+
+      text {
+          color: #007AFF;
+      }
+  }
+}

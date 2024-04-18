@@ -1,0 +1,13 @@
+<!--pages/person/person.wxml-->
+
+<view class="wrapper">
+  <view class="view-container">
+    <van-image round width="10rem" height="10rem" src="/assets/头像.png" />
+  </view>
+</view>
+<view class="wrapper custom-style">{{id}}</view>
+<van-divider />
+<van-cell-group>
+  <van-cell title="个人信息" value="内容" />
+  <van-cell title="数据记录" value="内容" label="描述信息" border="{{ false }}" />
+</van-cell-group>
